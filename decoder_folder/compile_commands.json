@@ -1,0 +1,7 @@
+[
+  {
+    "directory": "C:/Users/Ar Kar/Desktop/satellite_wave_file/decoder_folder",
+    "command": "gcc -c main.c -o main.o",
+    "file": "main.c"
+  }
+]

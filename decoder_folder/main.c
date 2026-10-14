@@ -1,10 +1,10 @@
 #include "header.h"
 
 
-WaveHeader wave_1;
-Audio_buffer audio_buf_1;
-DSPFilter dsp_1;
-ImageFrame img_1;
+    WaveHeader wave_1;
+    Audio_buffer audio_buf_1;
+    DSPFilter dsp_1;
+    ImageFrame img_1;
 
 const float num_taps[15] = {0.005f, -0.012f, -0.031f, 0.0f, 0.088f, 0.215f, 0.324f, 0.377f, 0.324f, 0.215f, 0.088f, 0.0f, -0.031f, -0.012f, 0.005f};
 
@@ -78,6 +78,9 @@ int img_frame(ImageFrame *img_1, float *envelope)
 
 int main()
 {
+
+
+
     FILE *file_open = fopen("sat_wave_sample.wav", "rb");
     if(!file_open)
     {
@@ -100,7 +103,7 @@ int main()
     fclose(file_open);
 
     float *env_data = dsp_filter(&dsp_1);
-    printf("smaple_1 %f\n", env_data[100]);
+    printf("sample_1 %f\n", env_data[100]);
 
     img_frame(&img_1, env_data);
     return 0;
